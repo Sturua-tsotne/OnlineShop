@@ -1,0 +1,109 @@
+﻿@model Shop.Models.RegistrationModel
+@{
+    ViewBag.Title = "Registration";
+
+}
+
+
+
+
+
+<style>
+    .mynavbar, .mynav, .searc {
+        display: none;
+    }
+
+    .myslaid {
+        display: inline-block
+    }
+
+    .logo {
+        margin-top:20px;
+        width: 143px;
+        border-radius: 100%;
+        box-shadow: 0 0 9px #694188;
+    }
+   label{
+       color: #694188;
+    }
+
+</style>
+
+
+
+@*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">*@
+
+@*GeotonEntities*@
+
+<h2 style="color:#694188">რეგისტრაცია</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr style="height:5px ; background-color:#694188" />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-10 input-field col-md-10">
+                <label for="name">სახელი</label>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control validate", @id = "name" } })
+
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10 input-field col-md-10">
+                <label for="last_name">გვარი</label>
+                @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control validate", @id = "last_name" } })
+
+                @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10 input-field col-md-10">
+                <label for="email">ელ.ფოსტა</label>
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control validate", @id = "email", @dir = "ltr", @type = "email" } })
+
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10 input-field col-md-10">
+                <label for="password">პაროლი</label>
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control validate", @id = "password", @type = "password" } })
+
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10 input-field col-md-10">
+                <label for="RepeatPassword">გაიმეორეთ პაროლი</label>
+                @Html.EditorFor(model => model.RepeatPassword, new { htmlAttributes = new { @class = "form-control validate", @id = "RepeatPassword", @type = "password" } })
+
+                @Html.ValidationMessageFor(model => model.RepeatPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>პაროლი უნდა შეიცავდეს მინიმუმ 6 სიმბოლოს</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="რეგისთრაცია" class="btn  " style="background-color: #694188; color:#ffff"/>
+            </div>
+            <div style="color:red;" class="col-md-offset-2 col-md-10">
+                @Html.Raw(ViewBag.HtmlOutput)
+            </div>
+        </div>
+    </div>
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -1,0 +1,175 @@
+﻿@model Shop.Models.ProductModel
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+    .mynavbar, .mynav, .searc {
+        display: none;
+    }
+
+    .myslaid {
+        display: inline-block
+    }
+
+    .logo {
+        margin-top: 20px;
+        width: 143px;
+        border-radius: 100%;
+        box-shadow: 0 0 9px #694188;
+    }
+
+    label {
+        color: #694188;
+    }
+
+    .productandimg {
+        position: relative;
+        width: 250px;
+        height: 400px;
+        box-shadow: 0 0 7px 2px #694188;
+    }
+
+        .productandimg img {
+            position: absolute;
+            height: 80%;
+            width: 100%;
+            padding: 3.5%;
+        }
+
+        .productandimg .productnam {
+            position: absolute;
+            align-content: center;
+            color: #694188;
+            margin-top: 126%;
+            margin-left: 27%;
+        }
+
+    .check {
+        display: none;
+    }
+
+    #btncheck {
+        background-color: #a41ed073;
+        margin-top: 0;
+    }
+
+    #category {
+        max-width: 326px;
+        width: 224px;
+        background: #694188b5;
+        color: white;
+        height: 35px;
+    }
+</style>
+<div class="nav-left">
+    <h2 style="color:#694188">პროდუქტის დამატება</h2>
+    <hr style="height:5px ; background-color:#694188" />
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  col-sm-12">
+            <form action="/Product/Addproduc" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <label>პროდუცტის სახელი</label>
+                            @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control validate", @id = "productname" } })
+                            @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <label>პროდუცტის ფასი</label>
+                            @Html.EditorFor(model => model.ProductPass, new { htmlAttributes = new { @class = "form-control validate", @id = "productpass" } })
+                            @Html.ValidationMessageFor(model => model.ProductPass, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <label>აირჩიე კატეგორია</label>
+                            <select class="form-control" id="category" name="category">                              
+                                <option>სხვადასხვა</option>
+                                <option>ტანსაცმელი</option>
+                                <option>აქსესუარი</option>
+                                <option>ტექნიკა</option>
+                            </select>
+
+                            @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <label>პროდუცტის ფოტო</label>
+                            <div id="imgInp" class="col-10">
+                                <input type="file" name="ProductImg" class="form-control-file" id="ProductImg">
+                                @Html.ValidationMessageFor(model => model.ProductImg, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div id="save" class="check form-group">
+                            <input id="img" type="submit" class="btn btn btn-success" value="პროდუქტის შენახვა 🚀" />
+                        </div>
+
+                </div>
+                <div id="save" class="check form-group">
+                    <input type="submit" class=" btn btn-success" value="პროდუქტის შენახვა 🚀" />
+                </div>
+            </form>
+            <button id="btncheck">შემოწმება</button>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+           
+                <h1 style="font-size:15px"  id="checkerror"class="text-danger check  errorani"> ყველა ველის შევსება აუცილებელია</h1>
+         
+            <div id="check" class="check">
+
+                <div class="productandimg">
+                    <img id="blah" src="#" alt="ფოტო" />
+                    <div class="productnam">
+                        <h3 id="prod"></h3>
+                        <h5 style="margin-left:30%" id="pass"></h5>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#btncheck').click(function () {
+            var productname = $('#productname').val();
+            var productpass = $('#productpass').val();
+            var category = $('#category').val();
+            var img = $('#img').val();
+            if (productname == "" || productpass == "" || category == "" || img == "") {
+
+                $("#checkerror").removeClass("check");
+
+            }
+            else {
+
+                $("#prod").html(productname);
+                $("#pass").html(productpass + '₾');
+                $("#check").removeClass("check");
+                $("#save").removeClass("check");
+            }
+
+
+        })
+
+
+    });
+
+
+
+
+</script>
+

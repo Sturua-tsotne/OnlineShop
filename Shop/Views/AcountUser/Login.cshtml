@@ -1,0 +1,71 @@
+﻿@model Shop.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+}
+<style>
+   header{
+       display:none
+   }
+
+    label {
+        color: #694188;
+    }
+
+    input {
+        color: aqua
+    }
+    footer{
+        display:none
+    }
+</style>
+
+<div style="height:20px; margin-left:-120px" id="container"></div>
+
+
+
+<h3 style="color:#694188">შესვლა</h3>
+
+
+<div >
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal container">
+            <hr style="height:5px ; background-color:#694188" />
+
+
+
+
+            <div class="form-group">
+                <div class="col-md-10 input-field col-md-10">
+                    <label for="email">ელ.ფოსტა</label>
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control validate", @id = "email", @dir = "ltr", @type = "email" } })
+
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10 input-field col-md-10">
+                    <label for="password">პაროლი</label>
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control validate", @id = "password", @type = "password" } })
+
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="შესვლა 🏠 " class="btn " style="background-color: #694188; color:#ffff" />
+                </div>
+                <div style="color:red;" class="col-md-offset-2 col-md-10">
+                    @Html.Raw(ViewBag.HtmlOutput)
+                </div>
+            </div>
+
+
+        </div>
+    }
+
+</div>

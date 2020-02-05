@@ -1,0 +1,222 @@
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    margin-top: 5px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+select,
+textarea {
+    max-width: 326px;
+    width: 224px;
+    background: #694188b5;
+    color:peachpuff;
+    color: white;
+    height: 35px;
+}
+
+
+/*registracia*/
+.errorCheck {
+    height: 118px;
+}
+
+.errorPassword {
+    width: 50%;
+    color: #970317;
+    max-width: 797px;
+}
+
+.errorVel {
+    height: 40px;
+}
+
+#btn {
+    margin-top: 30px;
+}
+
+.danger {
+    border-bottom-color: red;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0px 0px 3px 4px #bd8383;
+}
+
+.success {
+    border-bottom-color: green;
+    box-shadow: 0px 0px 3px 4px #cde2cb;
+}
+
+.span {
+    display: none;
+}
+
+.span-active {
+    display: inline-block;
+    color: red;
+    padding: 3px;
+    width: 24.5%;
+    margin: 0px 0 3px 0;
+    text-align: center
+}
+/*header*/
+.mynav {
+    margin-top: -5px;
+
+    padding: 8px;
+}
+
+    .mynav ul li {
+        margin-left: 3px;
+        padding: 1px;
+    }
+
+.mynavbar {
+    margin-top: 20px
+}
+
+    .mynavbar ul li {
+        margin-left: 5px;
+        transition: 1.3s;
+        background-color: #694188;
+    }
+
+
+        .mynavbar ul li:hover {
+            cursor: pointer;
+            background-color: #14e92ed6;
+            
+           
+        }
+
+        .mynavbar ul li a {
+            padding:20px;
+            color: #ffffff;
+            background-color: #694188;
+        }
+
+.mynav ul li a {
+    color: #694188;
+}
+
+.mynavbar ul li a:hover {
+    color: #ffffff;
+    background-color: green;
+}
+
+
+/* General Styling */
+
+body {
+    /*padding: 60px 0;*/
+    font-family: sans-serif;
+    color: #333;
+}
+
+h1, h2 {
+    width: 960px;
+    margin: 0 auto 12px auto;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.outerWrapper {
+    text-align: left;
+    position: relative;
+    margin: 60px auto 60px auto;
+    width: 960px;
+}
+
+.item {
+    float: left;
+    margin-right: 48px;
+    width: 162px;
+    padding: 20px;
+    height: 162px;
+    border: 1px solid #b3b3b3;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+    .item div {
+        background: #ddd;
+        width: 99%;
+        height: 99%;
+        color: white;
+        color: #b3b3b3;
+        text-align: center;
+        line-height: 162px;
+        font-size: 60px;
+        border-radius: 5px;
+        border: 1px solid #b3b3b3;
+    }
+
+/*.left-nav-btn, .right-nav-btn {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    top: 80px;
+    cursor: pointer;
+    opacity: 0.8;
+    background: transparent url('../images/arrows.png') top left no-repeat;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}*/
+
+.left-nav-btn {
+    left: -80px;
+}
+
+.right-nav-btn {
+    right: -80px;
+    background-position: top right;
+}
+
+    .left-nav-btn:hover, .right-nav-btn:hover {
+        opacity: 1;
+    }
+
+
+.pager {
+    line-height: 100px;
+    text-align: center;
+}
+
+    .pager > span {
+        cursor: pointer;
+        border-radius: 8px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: #DDDDDD;
+        border: 1px solid #B3B3B3;
+        margin: 0 4px;
+       
+    }
+
+        .pager > span.active {
+            background: #B3B3B3;
+        }
+
+        .pager > span > span {
+            display: none;
+        }
+
+/* Counter (See Example 7) */
+
+#counter {
+    margin-top: -30px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 20px;
+}

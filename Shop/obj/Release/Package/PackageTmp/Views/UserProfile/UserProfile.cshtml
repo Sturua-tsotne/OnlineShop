@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Shop.Models.DB.Product>
+
+@{
+    ViewBag.Title = "UserProfile";
+}
+
+<h2>UserProfile</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AuthenticUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductCreationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductPass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AuthenticUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            <img style="height:150px" src="@item.ProductImg" alt="Alternate Text" />
+
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductCreationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductPass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,296 @@
+﻿<div class="container" id="container">
+    <div id="inner">
+        <div id="carouselExampleSlidesOnly" class="demo-img row carousel slide " data-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <img style="height:500px!important" src="~/Adminphotos/slaider1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>გინდათ ისეთი ნივთი, რომლითაც ყველა დაინტერესდება !</h5>
+                        <p>შეუკვეთე ახლავედა მიღე უთო საჩუქრად </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+
+                    <img style="height:500px!important" src="~/Adminphotos/slaider2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>ჩვენ ყოველთვის მზადვართ თქვენი შეკვეთის შესრულებისთვის </h5>
+                        <p>თუ შეიძენთ სამ სამკაულს ბარემ მეოთხეც შეიძინეთ</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="">
+
+
+                    <img style="height:500px!important" src="~/Adminphotos/images.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>თუ გსურთ ისეთი ნივთი რომლის მაგვარსაც ვერ ნავახ დუნიაზე</h5>
+                        <p>იჩქარე შეუკვეთე ახლავე და თქვენ  ბედნიერება გეწვევათ</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="width:100%" class="demo-overlay ">
+
+
+                <div style="text-align:center" class="w-100 nav flex-column">
+
+                    <h1 style="color:#ffff">
+                        კეთილი იყოს თქვენი მობრძანება 😍 <br />
+                        აქ აუცილებლად იპოვით
+                        იმ ნივთს , რომელიც ასე გაკლდათ ცხოვრებაში
+                    </h1>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <div id="img1" class="thumb " style="text-align:center">
+                <h4 style="margin-top:20px;    margin-top: 25%; margin-left: 13%; position: absolute;">
+                    აჩუქე მეგობარს გაბედნიერე
+                </h4>
+                <a href="#">
+                    <span>საფულე</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 offset-md-4">
+            <h4 style="margin-top:20px; margin-top: 25%; margin-left: 13%; position: absolute;">
+                საფულე რომელიც ერთადერთია მსოფლიოში მხოლოდჩვენთან
+            </h4>
+            <div id="img2" class="thumb">
+
+                <a href="#">
+
+                    <span>უნიკალური საფულე</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div style="position:relative;" class="demo-wrap">
+    <div id="demo" class="demo">
+        <ul class="slide-wrap" id="example">
+            <li class="pos1">
+                <div class="inner">
+                    <a href="#">
+                        <img src="https://unsplash.it/300/390?image=944" />
+                        <span class="pic-tit">1</span>
+                    </a>
+                </div>
+            </li>
+            <li class="pos2">
+                <div class="inner">
+                    <a href="#">
+                        <img src="https://unsplash.it/300/390?image=943" />
+                        <span class="pic-tit">2</span>
+                    </a>
+                </div>
+            </li>
+            <li class="pos3">
+                <div class="inner">
+                    <a href="#">
+                        <img src="https://unsplash.it/300/390?image=942" />
+                        <span class="pic-tit">3</span>
+                    </a>
+                </div>
+            </li>
+            <li class="pos4">
+                <div class="inner">
+                    <a href="#">
+                        <img src="https://unsplash.it/300/390?image=941" />
+                        <span class="pic-tit">4</span>
+                    </a>
+                </div>
+            </li>
+            <li class="pos5">
+                <div class="inner">
+                    <a href="#">
+                        <img src="https://unsplash.it/300/390?image=940" />
+                        <span class="pic-tit">5</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <a href="#">
+                        <img data-src="https://unsplash.it/300/390?image=840" />
+                        <span class="pic-tit">6</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <a href="#">
+                        <img data-src="https://unsplash.it/300/390?image=340" />
+                        <span class="pic-tit">8</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <i class="arrow prev" id="jprev">&lt;</i>
+        <i class="arrow next" id="jnext">&gt;</i>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="~/Scripts/Skslaideroling.js"></script>
+<script>
+    $('#demo').RollingSlider({
+        showArea: "#example",
+        prev: "#jprev",
+        next: "#jnext",
+        moveSpeed: 300,
+        autoPlay: true
+    });
+</script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        (function () {
+            // Init
+            var container = document.getElementById("container"),
+                inner = document.getElementById("inner");
+
+            // Mouse
+            var mouse = {
+                _x: 0,
+                _y: 0,
+                x: 0,
+                y: 0,
+                updatePosition: function (event) {
+                    var e = event || window.event;
+                    this.x = e.clientX - this._x;
+                    this.y = (e.clientY - this._y) * -1;
+                },
+                setOrigin: function (e) {
+                    this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+                    this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+                },
+                show: function () {
+                    return "(" + this.x + ", " + this.y + ")";
+                }
+            };
+
+            // Track the mouse position relative to the center of the container.
+            mouse.setOrigin(container);
+
+            //----------------------------------------------------
+
+            var counter = 0;
+            var refreshRate = 10;
+            var isTimeToUpdate = function () {
+                return counter++ % refreshRate === 0;
+            };
+
+            //----------------------------------------------------
+
+            var onMouseEnterHandler = function (event) {
+                update(event);
+            };
+
+            var onMouseLeaveHandler = function () {
+                inner.style = "";
+            };
+
+            var onMouseMoveHandler = function (event) {
+                if (isTimeToUpdate()) {
+                    update(event);
+                }
+            };
+
+            //----------------------------------------------------
+
+            var update = function (event) {
+                mouse.updatePosition(event);
+                updateTransformStyle(
+                    (mouse.y / inner.offsetHeight / 2).toFixed(2),
+                    (mouse.x / inner.offsetWidth / 2).toFixed(2)
+                );
+            };
+
+            var updateTransformStyle = function (x, y) {
+                var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+                inner.style.transform = style;
+                inner.style.webkitTransform = style;
+                inner.style.mozTranform = style;
+                inner.style.msTransform = style;
+                inner.style.oTransform = style;
+            };
+
+            //--------------------------------------------------------
+
+            container.onmousemove = onMouseMoveHandler;
+            container.onmouseleave = onMouseLeaveHandler;
+            container.onmouseenter = onMouseEnterHandler;
+        })();
+
+    })
+</script>
+
+
+
+
+<script>
+
+
+    $('#search').keyup(function () {
+        var search = $('#search').val();
+        console.log(search)
+
+        $.ajax({
+            url: '/Home/Search',
+            method: 'Post',
+            type: 'Json',
+            data: { "search": search },
+            success: function (respons) {
+                //$('#suggestions').remove();
+                //var htmlElement = "<ul Id='suggestions' " >
+                //    S.each(respons, function (index, value) {
+                //        htmlElement += "<li>" + value + "</li>";
+                //    });
+                //htmlElement += "</ul>"
+                //search.after(htmlElement);
+
+
+            }
+        })
+
+
+    })
+</script>
